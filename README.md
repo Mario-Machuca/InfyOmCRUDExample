@@ -1,5 +1,6 @@
 # InfyOmCRUDExample
 CRUD Generado con Laravel y InfyOm
+
 Basado en https://labs.infyom.com/laravelgenerator/docs/6.0/installation
 # Instalacción :
 1) Generar proyecto de Laravel 6:
@@ -69,12 +70,13 @@ Route::get('/home', 'HomeController@index');
         ],
     ],
 ```
-13) Generar un CRUD(scaffold):
+# Generar CRUD
+1) Generar un CRUD(scaffold):
 ```
 php artisan infyom:scaffold $NOOMBRE_MODELO
 ```
 *Sustituyendo el $NOOMBRE_MODELO por el Nombre del Modelo a generar(Notas, Autos, Usuarios, etc).*
-14) Una vez generado el modelo ingresar los datos del campo en base a la configuración siguiente:
+2) Una vez generado el modelo ingresar los datos del campo en base a la configuración siguiente:
 Para la especifiación de entradas deberan de colocarse de acuerdo a 
 name db_type html_type options
 Es decir:
@@ -121,7 +123,8 @@ Este formato debera de ser el mismo que toma Laravel en sus validaciones, por ej
 - numeric
 
 Una vez colocado todos los campos del CRUD(Datos), escribir "exit" en el comando para terminar.
-Tras esto se generara el CRUD de la tabla de datos, y se procedera a correr el proyecto con el comando:
+
+3) Tras esto se generara el CRUD de la tabla de datos, y se procedera a correr el proyecto con el comando:
 ```
 php artisan serve 
 ```
